@@ -7,43 +7,46 @@ Table of Contents
 1. Getting Started
 2. Project Structure
 3. Installation
-4. Running Tests
-5. Methode, Endpoint and Response Code
-6. Adding New Tests
-7. Generating Reports
-8. Saving File to Github Repository
+4. Running Tests in vs code
+5. Simple running test in Jenkins
+6. Methode, Endpoint and Response Code
+7. Adding New Tests
+8. Generating Reports
+9. Saving File to Github Repository
 9. Application testing in this folder CHART_TESTING
 
 ---------------------
 Getting Started
 
-This cart testing is testing for internal recruitment to become QA in Bluebird. this testing build in jest and save in github as repository file. the testing source is open API from "https://api.practicesoftwaretesting.com/".
+This cart testing is testing for internal recruitment to become QA in Bluebird. 
+this testing build in jest and save in github as repository file. 
+the testing source is open API from "https://api.practicesoftwaretesting.com/".
 
 ---------------------
 Project Structure
 
 .
-├── __tests__/                 # Test files
-│   ├── create-charts/         # Folder for testing Create Chart APIs
-│   │   └── create-chart.js
-│   ├── get-charts/            # Folder for testing Get Chart APIs
-│   │   └── get-chart.js
-├── collections/               # API collections
-│   ├── create_charts/         # Logic for Create Chart API
-│   │   └── create_charts.success.js
-│   ├── get_charts/            # Logic for Get Chart API
-│       └── get_charts.success.js
-├── config/                    # Configuration files
-│   ├── global-setup.js        # Global setup for tests
-│   ├── jest.config.js         # Jest configuration file
-├── test-data/                 # Test data in JSON format
-│   ├── create_charts/         # Test data for Create Chart API
-│   └── get_charts/            # Test data for Get Chart API
-├── utilities/                 # Helper utilities for the framework
-│   └── verifier.js
-├── reports/                   # Test reports (generated "jest_html_reporters")
-├── package.json               # Project dependencies and scripts
-└── README.md                  # Documentation
+1.  ├── __tests__/                 # Test files
+2.  │   ├── create-charts/         # Folder for testing Create Chart APIs
+3.  │   │   └── create-chart.js
+4.  │   ├── get-charts/            # Folder for testing Get Chart APIs
+5.  │   │   └── get-chart.js
+6.  ├── collections/               # API collections
+7.  │   ├── create_charts/         # Logic for Create Chart API
+8.  │   │   └── create_charts.success.js
+9.  │   ├── get_charts/            # Logic for Get Chart API
+10. │       └── get_charts.success.js
+11. ├── config/                    # Configuration files
+12. │   ├── global-setup.js        # Global setup for tests
+13. │   ├── jest.config.js         # Jest configuration file
+14. ├── test-data/                 # Test data in JSON format
+15. │   ├── create_charts/         # Test data for Create Chart API
+16. │   └── get_charts/            # Test data for Get Chart API
+17. ├── utilities/                 # Helper utilities for the framework
+18. │   └── verifier.js
+19. ├── reports/                   # Test reports (generated "jest_html_reporters")
+20. ├── package.json               # Project dependencies and scripts
+21. └── README.md                  # Documentation
 
 ---------------------
 Installation for using jest
@@ -53,10 +56,12 @@ Installation for using jest
 3. write "npm install --save-dev jest-html-reporters" to ge file package.lock.json and node module, and report jest-html-reporters.html
 4. write "npm install --save-dev @jest/globals" and other library to get libraries.
 5. make file jest.config.js for getting jest_html_reporters.html when run test like below
+    
     reporters: [
         "default",
         "jest-html-reporters"
     ],
+    
 6. make folder caller (rest-api.js) to create methode that we will use in rest API
 7. make folder utilities (verifier.js) to create function for verify response
 8. make folder file global-variable.json and jest.config.js to create variable global that can use for all file
@@ -65,11 +70,21 @@ Installation for using jest
 11. make folder __test__ to create file for testsuite, test case, and logic for running test
 
 ---------------------
-Running Test
+Running Test in vs code
 
 1. npm test                                     # run test all test suites
 2. npm test -- __test__/folder_dituju           # run test base on folder
 3. npm test -- __test__/folder_dituju/file.js   # run test base on test suites       
+
+---------------------
+Simple running test in Jenkins
+
+result in Jenkins
+
+Started by user irfan fauzi
+[Pipeline] Start of Pipeline
+[Pipeline] End of Pipeline
+Finished: SUCCESS
 
 ---------------------
 Methode, Endpoint and Response Code
@@ -81,26 +96,31 @@ these are some endpoint and code validation that can find in this open API
 Url : https://api.practicesoftwaretesting.com/
 
 1. Create Chart : 
-    a.201 (`/carts`)                # Endpoint in Contract API
+    a.201 (`/carts`)                # Endpoint in Contract API, 
     b.404 (`/carts/abc`)
+
 2. AddItem Chart: 
     a.201 (`/carts?id=${cartId}`)
-    b.404 (`/carts/${cartId}`)      # Endpoint in Contract API
+    b.404 (`/carts/${cartId}`)      # Endpoint in Contract API, 
+
 3. Get Chart    : 
-    a.200 (`/carts/${cartId}`)      # Endpoint in Contract API
+    a.200 (`/carts/${cartId}`)      # Endpoint in Contract API, 
     b.301 (`/carts/${cartId}/`)
     c.404 (`/cart/${cartId}`)
+
 4. Update Chart : 
-    a.200 (``/carts/${cartId}/product/quantity`)     # still Faile Endpoint in Contract API
+    a.200 (``/carts/${cartId}/product/quantity`)     # still Faile Endpoint in Contract API, 
     b.301 (`/carts/${cartId}/product/quantity/`)
     c.404 (`/carts/${cartId}/${productId}/quantity`)
     d.405 (`/carts/${cartId}`)
+
 5. Delete Chart : 
-    a.204 (`/carts/${cartId}`)      # Endpoint in Contract API
+    a.204 (`/carts/${cartId}`)      # Endpoint in Contract API, 
     b.301 (`/cart/${cartId}/`)
     c.404 (`/carts/${cartId}/abc`)
+    
 6. DeleteItem Chart : 
-    a.204 (`/carts/${cartId}/product/${productId}`) # Endpoint in Contract API
+    a.204 (`/carts/${cartId}/product/${productId}`) # Endpoint in Contract API,
     b.301 (`/cart/${cartId}/product/${productId}/`)
     c.404 (`/cart/${cartId}/product/${productId}`)
 
