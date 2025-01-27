@@ -7,7 +7,9 @@ const test_data = {
     "body": {},
     "expected_result": {
         "status_code": 404,
-        "body": {},
+        "body": {
+            "message": 'Cart not found',
+        },
         "json_schema": {}
     }
 };

@@ -10,20 +10,19 @@ const testDataSuccess = requireAll({
 
 const verifier = new Verifier();
 
-let cartId; // Variabel global untuk menyimpan ID Chart
+let cartId;
 
-// Gunakan describe.only untuk menjalankan hanya suite ini
+
 describe('Failed Create Chart', () => {
     test.each(Object.values(testDataSuccess))(
         "$title", async ({ url, header, body, expected_result }) => {
-            // Panggil fungsi createChart dan verifikasi hasilnya
-            const res = await create_ChartFailed.createChartFailed(url, header, body);
-            verifier.verifyResponse(res, expected_result);
 
-            // Simpan id dari respons body
+            const res = await create_ChartFailed.createChartFailed(url, header, body)
+
             cartId = res.body.id;
 
             console.log('Actual Response Body:', res.body);
+            verifier.verifyResponse(res, expected_result);
         }
     );
 

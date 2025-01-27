@@ -10,7 +10,9 @@ const test_data = {
     },
     "expected_result": {
         "status_code": 404, 
-        "body": {},
+        "body": {
+           "message": 'Resource not found', 
+        },
         "json_schema": {}
     }
 };

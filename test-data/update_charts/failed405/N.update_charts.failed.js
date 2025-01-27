@@ -10,7 +10,9 @@ const test_data = {
     },
     "expected_result": {
         "status_code": 405, 
-        "body": {},
+        "body": {
+            "message": 'Method is not allowed for the requested route',
+        },
         "json_schema": {}
     }
 };
