@@ -9,10 +9,10 @@ Table of Contents
 3. Installation
 4. Running Tests
 5. Methode, Endpoint and Response Code
-5. Configuration
 6. Adding New Tests
 7. Generating Reports
 8. Saving File to Github Repository
+9. Application testing in this folder CHART_TESTING
 
 ---------------------
 Getting Started
@@ -48,10 +48,21 @@ Project Structure
 ---------------------
 Installation for using jest
 
-
-
-
-
+1. download node js and install vs code in local
+2. write "npm init -y" to get file package.json in vs code terminal
+3. write "npm install --save-dev jest-html-reporters" to ge file package.lock.json and node module, and report jest-html-reporters.html
+4. write "npm install --save-dev @jest/globals" and other library to get libraries.
+5. make file jest.config.js for getting jest_html_reporters.html when run test like below
+    reporters: [
+        "default",
+        "jest-html-reporters"
+    ],
+6. make folder caller (rest-api.js) to create methode that we will use in rest API
+7. make folder utilities (verifier.js) to create function for verify response
+8. make folder file global-variable.json and jest.config.js to create variable global that can use for all file
+9. make folder collection to create file for handling methode with header request that will use
+10. make folder test-data to create file for determine request and response that we want get
+11. make folder __test__ to create file for testsuite, test case, and logic for running test
 
 ---------------------
 Running Test
@@ -61,7 +72,7 @@ Running Test
 3. npm test -- __test__/folder_dituju/file.js   # run test base on test suites       
 
 ---------------------
-Endpoint and Code validation
+Methode, Endpoint and Response Code
 
 validation of this Automation cart base on Endpoint because in every case even payload body request already erase, the response still got success when the Endpoint is already as same as contract or get the right Endpoint when not same as contract. specialy for update chart success, it's still can't find success code 200 even already using endpoint in contract or even already try other format endpoint.
 
@@ -94,22 +105,41 @@ Url : https://api.practicesoftwaretesting.com/
     c.404 (`/cart/${cartId}/product/${productId}`)
 
 ---------------------
-Configuration
-
-
-
----------------------
 Adding New Test
 
-
+for adding new test, we can do for some steps
+1. determine the API that we want test is Rest or gRPC
+2. find the request and response that we want to get. we can check it first from API contract or try in postman first
+3. write payload request and response code or body that we want get
+4. write handler methode in collection base on methode, url, endpoint, and header of API
+5. write test file in folder __test__ to determine response that we want verify with the source of file.
 
 ---------------------
 Generating Report
 
+testing in jest, we can straight to get report from file jest_html_reporters.html.
+from that file we can see dashboar of our result testing to meka report.
 
 
 ---------------------
 Saving File to Github repository
+
+1. Create account in Github
+2. Click Home
+3. Click New Repository
+4. Copy link Repo
+5. Open Fork for push, pull, commit, and clone
+6. init new repo dan copy file ke folder repo di local
+7. Click local change and push all stage
+8. Fill commit subject and description, after that push commit button
+9. after success commit to local branch then click push to send data into github
+
+
+--------------------
+Application testing in this folder CHART_TESTING
+
+1. Jest Automation testing 
+2. package-test of Cart.postman_collection
 
 
 
