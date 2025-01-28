@@ -1,12 +1,12 @@
 {
-    "name": "mybb-api",
+    "name": "cart-api",
     "version": "1.0.0",
-    "description": "MyBluebird App API Automation Testing",
+    "description": "Cart CRUD API Automation Testing",
     "main": "index.js",
     "scripts": {
         "test": "jest"
     },
-    "author": "QA Automation - Blue Bird Group",
+    "author": "irfan fauzi - Blue Bird Group",
     "license": "ISC",
     "devDependencies": {
         "@grpc/grpc-js": "^1.9.14",
