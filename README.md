@@ -105,33 +105,33 @@ these are some endpoint and validation that can find in this open API
 Url : https://api.practicesoftwaretesting.com/
 
 1. Create Chart : (Validation status_code, body)
-    # 201 (`/carts`)                # Endpoint in Contract API, 
-    # 404 (`/carts/abc`)
+    * 201 (`/carts`)                # Endpoint in Contract API, 
+    * 404 (`/carts/abc`)
 
 2. AddItem Chart: (Validation status_code, body, json_schema)
-    # 201 (`/carts?id=${cartId}`)
-    # 404 (`/carts/${cartId}`)      # Endpoint in Contract API, 
+    * 201 (`/carts?id=${cartId}`)
+    * 404 (`/carts/${cartId}`)      # Endpoint in Contract API, 
 
 3. Get Chart    : (Validation status_code, body, json_schema)
-    # 200 (`/carts/${cartId}`)      # Endpoint in Contract API, 
-    # 301 (`/carts/${cartId}/`)
-    # 404 (`/cart/${cartId}`)
+    * 200 (`/carts/${cartId}`)      # Endpoint in Contract API, 
+    * 301 (`/carts/${cartId}/`)
+    * 404 (`/cart/${cartId}`)
 
 4. Update Chart : (Validation status_code, body)
-    # 200 (``/carts/${cartId}/product/quantity`)  # still Failed Endpoint in Contract API, 
-    # 301 (`/carts/${cartId}/product/quantity/`)
-    # 404 (`/carts/${cartId}/${productId}/quantity`)
-    # 405 (`/carts/${cartId}`)
+    * 200 (``/carts/${cartId}/product/quantity`)  # still Failed Endpoint in Contract API, 
+    * 301 (`/carts/${cartId}/product/quantity/`)
+    * 404 (`/carts/${cartId}/${productId}/quantity`)
+    * 405 (`/carts/${cartId}`)
 
 5. Delete Chart : (Validation status_code, body)
-    # 204 (`/carts/${cartId}`)      # Endpoint in Contract API, 
-    # 301 (`/cart/${cartId}/`)
-    # 404 (`/carts/${cartId}/abc`)
+    * 204 (`/carts/${cartId}`)      # Endpoint in Contract API, 
+    * 301 (`/cart/${cartId}/`)
+    * 404 (`/carts/${cartId}/abc`)
     
 6. DeleteItem Chart : (Validation status_code, body)
-    # 204 (`/carts/${cartId}/product/${productId}`) # Endpoint in Contract API,
-    # 301 (`/cart/${cartId}/product/${productId}/`)
-    # 404 (`/cart/${cartId}/product/${productId}`)
+    * 204 (`/carts/${cartId}/product/${productId}`) # Endpoint in Contract API,
+    * 301 (`/cart/${cartId}/product/${productId}/`)
+    * 404 (`/cart/${cartId}/product/${productId}`)
 
 ---------------------
 Adding New Test
@@ -179,9 +179,9 @@ Jenkins
 4. masukkan password yang disimpan pada "C:\Program Files\Jenkins\secrets\initialAdminPassword"
 4. download agent.jar in "http://localhost:8080/jnlpJars/agent.jar" dan simpan di folder jenkins
 5. buka jenkins dan buat agent untuk menjalankan setiap step di pipeline
-    # klik manage jenkins--Node--New Node
-    # isi nama agent--klik permanent agen--push create
-    # fill kolom to create agent--save
+    * klik manage jenkins--Node--New Node
+    * isi nama agent--klik permanent agen--push create
+    * fill kolom to create agent--save
 6. klik Node and klik agent that we just create. after that we will see curl to run agent. copy curl and paste into cmd with directory jenkins
 7. after jenkins agent online, the next step klik Dashboar and click New Item
 8. fill New item as what we need with link file repository, paste pipeline step, and run
