@@ -173,18 +173,19 @@ Application testing in this folder CHART_TESTING
 --------------------
 Jenkins
 
-1. Kunjungi situs resmi Jenkins: https://www.jenkins.io/download/.
-2. Pilih distribusi Windows dan unduh file Jenkins MSI Installer.
-3. running jenkins "java -jar jenkins.war --httpPort=8080"
-4. masukkan password yang disimpan pada "C:\Program Files\Jenkins\secrets\initialAdminPassword"
-4. download agent.jar in "http://localhost:8080/jnlpJars/agent.jar" dan simpan di folder jenkins
-5. buka jenkins dan buat agent untuk menjalankan setiap step di pipeline
-    * klik manage jenkins--Node--New Node
-    * isi nama agent--klik permanent agen--push create
-    * fill kolom to create agent--save
-6. klik Node and klik agent that we just create. after that we will see curl to run agent. copy curl and paste into cmd with directory jenkins
-7. after jenkins agent online, the next step klik Dashboar and click New Item
-8. fill New item as what we need with link file repository, paste pipeline step, and run
+1. Visit the official Jenkins site: https://www.jenkins.io/download/.
+2. Select the Windows distribution and download the Jenkins MSI Installer file.
+3. Run Jenkins with the command: java -jar jenkins.war --httpPort=8080.
+4. Enter the password stored in: C:\Program Files\Jenkins\secrets\initialAdminPassword.
+5. Download agent.jar from http://localhost:8080/jnlpJars/agent.jar and save it in the Jenkins folder.
+6. Open Jenkins and create an agent to execute each step in the pipeline:
+    * Click Manage Jenkins → Node → New Node.
+    * Enter the agent name → Select Permanent Agent → Click Create.
+    * Fill in the required fields to create the agent → Save.
+7. Click Node, then select the agent we just created. After that, you will see a command (curl) to run the agent. Copy the command and paste it into the command prompt in the Jenkins directory.
+8. Once the Jenkins agent is online, proceed as follows:
+    * Click Dashboard → Click New Item.
+    * Fill in the New Item name as required, add the repository link, paste the pipeline steps, and run.
 
 
 
