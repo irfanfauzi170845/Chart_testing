@@ -1,20 +1,20 @@
 const RestApiCaller = require('../../callers/rest-api');
-const { getCartId } = require('../../__tests__/create-carts/create-cart'); // Import fungsi getCartId dari Code 1
+const { getCartId } = require('../../__tests__/create-carts/create-cart');
 
 async function getCart(header) {
-    const cartId = getCartId (); // Ambil nilai cartId dari Code 1
-    const endPoint = `/carts/${cartId}`; // Endpoint lengkap
+    const cartId = getCartId ();
+    const endPoint = `/carts/${cartId}`;
 
     const caller = new RestApiCaller({
-        url: __URL_TESTINGCHART__, // URL dasar
-        endPoint: endPoint,        // Endpoint lengkap
+        url: __URL_TESTINGCHART__,
+        endPoint: endPoint,
         header: {
             'accept': 'application/json',
-            ...header,             // Header tambahan dari input
+            ...header,
         },
     });
 
-    const res = await caller.get(); // Melakukan GET request
+    const res = await caller.get();
     console.log('GET Cart Response:', res.body);
     return res;
 }

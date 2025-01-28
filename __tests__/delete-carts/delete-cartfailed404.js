@@ -4,7 +4,6 @@ const { describe, test } = require('@jest/globals');
 const Verifier = require('../../utilities/verifier');
 const requireAll = require('require-all');
 
-// Pastikan path ke folder `test-data` benar
 const deleteCartSuccess = requireAll({
     dirname: path.join(__dirname, '../../test-data/delete_carts/failed404'),
 });

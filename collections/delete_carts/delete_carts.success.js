@@ -2,22 +2,21 @@ const RestApiCaller = require('../../callers/rest-api');
 const { getCartId } = require('../../__tests__/create-carts/create-cart');
 
 async function deleteCart(header, body) {
-    const cartId = getCartId(); // Nilai parameter
-    const endPoint = `/carts/${cartId}`; // Endpoint dengan parameter diganti
-    
+    const cartId = getCartId();
+    const endPoint = `/carts/${cartId}`;    
 
 
     const caller = new RestApiCaller({
-        url: __URL_TESTINGCHART__, // URL dasar
-        endPoint: endPoint,        // Endpoint lengkap
+        url: __URL_TESTINGCHART__,
+        endPoint: endPoint,
         header: {
             'accept': 'application/json',
-            ...header,             // Header tambahan dari input
+            ...header,
         },
-        body: JSON.stringify(body), // Konversi body ke JSON string
+        body: JSON.stringify(body),
     });
 
-    const res = await caller.del(); // Melakukan POST request
+    const res = await caller.del();
     return res;
 }
 

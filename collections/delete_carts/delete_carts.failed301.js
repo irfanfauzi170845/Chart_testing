@@ -6,16 +6,16 @@ async function deleteCart(header, body) {
     const endPoint = `/cart/${cartId}/`;
 
     const caller = new RestApiCaller({
-        url: __URL_TESTINGCHART__, // URL dasar
-        endPoint: endPoint,        // Endpoint lengkap
+        url: __URL_TESTINGCHART__, 
+        endPoint: endPoint,
         header: {
             'accept': 'application/json',
-            ...header,             // Header tambahan dari input
+            ...header,
         },
-        body: JSON.stringify(body), // Konversi body ke JSON string
+        body: JSON.stringify(body),
     });
 
-    const res = await caller.del(); // Melakukan POST request
+    const res = await caller.del();
     return res;
 }
 
