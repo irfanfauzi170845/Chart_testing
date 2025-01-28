@@ -81,10 +81,10 @@ Simple running test in Jenkins
 
 result in Jenkins
 
-Started by user irfan fauzi
-[Pipeline] Start of Pipeline
-[Pipeline] End of Pipeline
-Finished: SUCCESS
+1. Started by user irfan fauzi
+2. [Pipeline] Start of Pipeline
+3. [Pipeline] End of Pipeline
+4. Finished: SUCCESS
 
 ---------------------
 Methode, Endpoint and Response Code
