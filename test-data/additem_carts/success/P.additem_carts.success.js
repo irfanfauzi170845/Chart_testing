@@ -11,7 +11,16 @@ const test_data = {
     "expected_result": {
         "status_code": 201, 
         "body": {},
-        "json_schema": {}
+        "json_schema": {
+            "title": "additem-cartsuccess",
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": ["id"]
+          }
     }
 };
 
