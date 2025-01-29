@@ -15,6 +15,7 @@ Table of Contents
 9. Saving File to Github Repository
 10. Application that used for CHART_TESTING
 11. CI/CD using Jenkins
+12. Video cart testing
 
 ---------------------
 Getting Started
@@ -203,6 +204,10 @@ CI/CD using Jenkins
     * https://git-scm.com/downloads
 10. making file jenkinsfile in job github using command "echo. > Jenkinsfile" in vs code and copy pipeline structure that we want implement
     * note : in step using "bat" for windows, and "sh" for linux
+
+--------------------
+Video cart testing
+
 
 
 
