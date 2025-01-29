@@ -18,40 +18,40 @@ pipeline {
         stage('Run Tests - Create Cart') {
             steps {
                 // Menjalankan pengujian untuk CREATE Cart
-                sh 'npx jest --testPathPattern=__tests__/create-chart --ci --reporters=default --reporters=jest-junit'
+                sh 'npm test -- __tests__/create-chart --ci --reporters=default --reporters=jest-junit'
             }
         }
 
         stage('Run Tests -  Get Cart') {
             steps {
                 // Menjalankan pengujian untuk GET Cart
-                sh 'npx jest --testPathPattern=__tests__/get-cart --ci --reporters=default --reporters=jest-junit'
+                sh 'npm test -- __tests__/get-cart --ci --reporters=default --reporters=jest-junit'
             }
         }
         stage('Run Tests - Add Item Cart') {
             steps {
                 // Menjalankan pengujian untuk ADD ITEM Cart
-                sh 'npx jest --testPathPattern=__tests__/additem-chart --ci --reporters=default --reporters=jest-junit'
+                sh 'npm test -- __tests__/additem-chart --ci --reporters=default --reporters=jest-junit'
             }
         }
 
         stage('Run Tests - Update Cart') {
             steps {
                 // Menjalankan pengujian untuk UPDATE Cart
-                sh 'npx jest --testPathPattern=__tests__/update-chart --ci --reporters=default --reporters=jest-junit'
+                sh 'npm test -- __tests__/update-chart --ci --reporters=default --reporters=jest-junit'
             }
         }
         stage('Run Tests - Delete Item Cart') {
             steps {
                 // Menjalankan pengujian untuk DELETE ITEM Cart
-                sh 'npx jest --testPathPattern=__tests__/deleteitem-chart --ci --reporters=default --reporters=jest-junit'
+                sh 'npm test -- __tests__/deleteitem-chart --ci --reporters=default --reporters=jest-junit'
             }
         }
 
         stage('Run Tests - Delete Cart') {
             steps {
                 // Menjalankan pengujian untuk DELETE Cart
-                sh 'npx jest --testPathPattern=__tests__/delete-chart --ci --reporters=default --reporters=jest-junit'
+                sh 'npm test -- __tests__/delete-chart --ci --reporters=default --reporters=jest-junit'
             }
         }
 
