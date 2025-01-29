@@ -208,6 +208,7 @@ CI/CD using Jenkins
 --------------------
 Video cart testing
 
+* Link : https://bluebirdgroup365.sharepoint.com/:v:/s/Myteam/EXeMaupXO5BOtu7kBB8C85gBXxSldFyOQIVaG9ViC8aHZQ?e=fj15qT 
 
 
 
