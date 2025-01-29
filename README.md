@@ -13,7 +13,7 @@ Table of Contents
 7. Adding New Tests
 8. Generating Reports
 9. Saving File to Github Repository
-10. Application testing in this folder CHART_TESTING
+10. Application that used for CHART_TESTING
 11. CI/CD using Jenkins
 
 ---------------------
@@ -167,10 +167,21 @@ Saving File to Github repository
 
 
 --------------------
-Application testing in this folder CHART_TESTING
+Application that used for CHART_TESTING
 
-1. Jest Automation testing 
-2. package-test of Cart.postman_collection
+1. Postman 
+    * first app to get real response from swagger before jest
+    * package-test of Cart.postman_collection
+2. VS Code
+    * application for write code for automation cart testing
+3. Jest 
+    * for creating automation testing and jenkinsfile
+4. Fork
+    * application for commit and push to Github
+5. Github
+    * as repository for public and to connect jenkins for CI/CD
+6. Jenkins
+    * application for running CI/CD
 
 --------------------
 CI/CD using Jenkins
