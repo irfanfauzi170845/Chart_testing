@@ -186,6 +186,11 @@ Jenkins
 8. Once the Jenkins agent is online, proceed as follows:
     * Click Dashboard → Click New Item.
     * Fill in the New Item name as required, add the repository link, paste the pipeline steps, and run.
+9. Install git to get file git.exe for connecting from jenkins to github
+    * https://git-scm.com/downloads
+10. making file jenkinsfile in job github using command "echo. > Jenkinsfile" in vs code and copy pipeline structure that we want implement
+    * note : in step using "bat" for windows, and "sh" for linux
+
 
 
 
