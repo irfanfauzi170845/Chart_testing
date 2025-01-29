@@ -9,6 +9,7 @@ const addItemSuccess = requireAll({
     dirname: path.join(__dirname, '../../test-data/additem_carts/success'),
 });
 
+
 const verifier = new Verifier();
 
 describe('Success additem Chart', () => {
