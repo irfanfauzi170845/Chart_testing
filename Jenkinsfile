@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        label 'cart-1' // Menjalankan pipeline di agent 'cart-1'
+        docker {
+            image 'node:18' // Gunakan image Node.js dengan shell Linux
+        }
     }
 
     environment {
