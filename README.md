@@ -98,7 +98,7 @@ After trying some manipulated data body request and endpoint in postman, we get 
 
 1. 200 (success)
 2. 204 (success)
-3. 301 (success with body {})
+3. 301 (success with body {} and req.body.null)
 4. 404 (Resource not found)
 5. 405 (Method is not allowed for the requested route)
 
@@ -110,7 +110,7 @@ Url : https://api.practicesoftwaretesting.com/
     * 201 (`/carts`)                # Endpoint in Contract API, 
     * 404 (`/carts/abc`)
 
-2. AddItem Chart: (Validation status_code, body, json_schema)
+2. AddItem Chart: (Validation status_code, body, json_schema, req.body.null)
     * 201 (`/carts?id=${cartId}`)
     * 404 (`/carts/${cartId}`)      # Endpoint in Contract API, 
 
@@ -119,7 +119,7 @@ Url : https://api.practicesoftwaretesting.com/
     * 301 (`/carts/${cartId}/`)
     * 404 (`/cart/${cartId}`)
 
-4. Update Chart : (Validation status_code, body)
+4. Update Chart : (Validation status_code, body, req.body.null)
     * 200 (``/carts/${cartId}/product/quantity`)  # still Failed Endpoint in Contract API, 
     * 301 (`/carts/${cartId}/product/quantity/`)
     * 404 (`/carts/${cartId}/${productId}/quantity`)
@@ -149,7 +149,7 @@ for adding new test, we can do for some steps
 Generating Report
 
 testing in jest, we can straight to get report from file jest_html_reporters.html.
-from that file we can see dashboar of our result testing to meka report.
+from that file we can see dashboard of our result testing.
 
 
 ---------------------
