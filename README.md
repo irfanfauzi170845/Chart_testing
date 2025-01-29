@@ -14,7 +14,7 @@ Table of Contents
 8. Generating Reports
 9. Saving File to Github Repository
 10. Application testing in this folder CHART_TESTING
-11. Jenkins
+11. CI/CD using Jenkins
 
 ---------------------
 Getting Started
@@ -80,12 +80,14 @@ Running Test in vs code
 ---------------------
 Simple running test in Jenkins
 
-result in Jenkins
+result in Jenkins 
 
 1. Started by user irfan fauzi
 2. [Pipeline] Start of Pipeline
 3. [Pipeline] End of Pipeline
 4. Finished: SUCCESS
+
+Note: for complete CI/CD can run from jenkinsfile base on information below
 
 ---------------------
 Methode, Endpoint and Response Code
@@ -171,7 +173,7 @@ Application testing in this folder CHART_TESTING
 2. package-test of Cart.postman_collection
 
 --------------------
-Jenkins
+CI/CD using Jenkins
 
 1. Visit the official Jenkins site: https://www.jenkins.io/download/.
 2. Select the Windows distribution and download the Jenkins MSI Installer file.
