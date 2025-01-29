@@ -57,12 +57,6 @@ pipeline {
                 bat 'npm test __tests__/delete-cart --ci --reporters=default --reporters=jest-junit --passWithNoTests'
             }
         }
-
-        stage('Publish Test Results') {
-            steps {
-                junit 'test-reports/jest/results.xml'
-            }
-        }
     }
 
     post {
